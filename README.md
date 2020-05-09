@@ -42,9 +42,9 @@ prometheus.yaml
 ```yaml
   rules:
 
-  # Alert for any instance that is unreachable for >5 minutes.
+  # Alert for large round found
   - alert: LargeRoundFound
-    expr: overlord_processing_round > 3
+    expr: overlord_processing_round_count > 3
     for: 20s
     labels:
       severity: page
