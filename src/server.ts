@@ -30,7 +30,7 @@ app.post('/', async (req, res) => {
     req.body.alerts.map(renderAlerting).join('\n'),
     { parse_mode: 'Markdown' },
   );
-  res.status(400).send('');
+  res.send('');
 });
 
 const port = process.env.ALERTING_PORT;
